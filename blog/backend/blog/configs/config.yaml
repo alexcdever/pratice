@@ -1,0 +1,21 @@
+Name: blog-api
+Host: 0.0.0.0
+Port: 8888
+Source: /Users/alexcdever/Documents/project/hugo/content/posts
+Mysql:
+  Database: blog
+  Host: localhost
+  Port: 3306
+  User: root
+  Password: password
+  Charset: utf8mb4
+  ParseTime: true
+  Loc: Asia%2FShanghai
+Postgres:
+  Database: blog
+  Host: localhost
+  Port: 5432
+  User: postgres
+  Password: password
+  SslMode: disable
+  TimeZone: Asia%2FShanghai

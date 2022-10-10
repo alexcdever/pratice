@@ -1,0 +1,21 @@
+type (
+    categoryName {
+        categoryName string `path:"categoryName"`
+    }
+    category {
+        category string `json:"category"`
+    }
+)
+
+@server(
+    group: categories
+)
+
+service blog-api {
+    @doc(
+        summary: "获取分类列表"
+    )
+    @handler getAllcategories
+    get /categories returns (category)
+}
+

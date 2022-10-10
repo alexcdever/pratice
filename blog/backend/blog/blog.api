@@ -1,0 +1,62 @@
+info(
+	title: "modern-blog"
+	desc: "the blog backend service"
+	author: "Alex Chen"
+	email: "alexcdever@gmail.com"
+)
+
+import (
+	"category.api"
+	"tag.api"
+)
+type (
+	blogId {
+		Id int64 `path:"id"`
+	}
+	name {
+		Name string `path:"name"`
+	}
+	blog {
+		Title      string   `json:"title"`
+		Content    string   `json:"content"`
+		Created_at string   `json:"createdAt"`
+		Updated_at string   `json:"updatedAt"`
+		Tags       []string `json:"tags"`
+		Categories []string `json:"categories"`
+	}
+
+	blogItem {
+		Id         int64    `json:"id"`
+		Title      string   `json:"title"`
+		Tags       []string `json:"tags"`
+		Categories []string `json:"categories"`
+	}
+)
+
+@server(
+	group: blogs
+)
+
+service blog-api {
+	@doc(
+		summary: "获取指定博客的全部内容"
+	)
+	@handler getBlog
+	get /blogs/:id (blogId) returns (blog)
+	
+	@doc(
+		summary: "获取博客列表"
+	)
+	@handler getAllBlogs
+	get /blogs returns (blogItem)
+	@doc(
+		summary: "获取具有指定分类的博客列表"
+	)
+	@handler getAllByCategory
+	get /blogs/categories/:name (name) returns (blogItem)
+	@doc(
+		summary: "获取具有指定标签的博客列表"
+	)
+	@handler getAllByTag
+	get /blogs/tags/:name (name) returns (blogItem)
+}

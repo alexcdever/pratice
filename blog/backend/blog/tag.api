@@ -1,0 +1,20 @@
+type (
+    tagName {
+        tagName string `path:"tagName"`
+    }
+    tag {
+        tag string `json:"tag"`
+    }
+)
+
+@server(
+    group: tags
+)
+
+service blog-api {
+    @doc(
+        summary: "获取标签列表"
+    )
+    @handler getAllTags
+    get /tags returns (tag)
+}
