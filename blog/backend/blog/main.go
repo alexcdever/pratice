@@ -1,12 +1,12 @@
 package main
 
 import (
+	"blog/configs"
+	"blog/internal/dao"
+	"blog/internal/routers"
+	"blog/internal/util/important"
 	"fmt"
 	"log"
-	"modern-blog/configs"
-	"modern-blog/internal/dao"
-	"modern-blog/internal/routers"
-	"modern-blog/internal/util/important"
 	"net/http"
 	"time"
 )

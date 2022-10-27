@@ -1,4 +1,4 @@
-module modern-blog
+module blog
 
 go 1.19
 

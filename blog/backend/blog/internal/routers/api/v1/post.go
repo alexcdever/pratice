@@ -1,8 +1,8 @@
 package v1
 
 import (
+	"blog/internal/service"
 	"github.com/gin-gonic/gin"
-	"modern-blog/internal/service"
 )
 
 type Post struct {

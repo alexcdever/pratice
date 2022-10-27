@@ -1,15 +1,15 @@
 package important
 
 import (
+	"blog/configs"
+	"blog/internal/dao"
+	"blog/internal/model"
 	"context"
 	"crypto/md5"
 	"encoding/hex"
 	"gorm.io/gorm"
 	"io"
 	"log"
-	"modern-blog/configs"
-	"modern-blog/internal/dao"
-	"modern-blog/internal/model"
 	"os"
 	"strings"
 	"sync"

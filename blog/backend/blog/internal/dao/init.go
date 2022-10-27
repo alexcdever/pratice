@@ -1,10 +1,10 @@
 package dao
 
 import (
+	"blog/configs"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
-	"modern-blog/configs"
 )
 
 var DbConnection *gorm.DB

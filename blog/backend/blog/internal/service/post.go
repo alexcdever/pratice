@@ -1,9 +1,9 @@
 package service
 
 import (
+	"blog/internal/dao"
+	"blog/internal/model"
 	"github.com/gin-gonic/gin"
-	"modern-blog/internal/dao"
-	"modern-blog/internal/model"
 )
 
 type Post struct {
